@@ -35,7 +35,7 @@ What is the mean total number of steps taken per day?
 
     qplot(date, data=sumsteps, geom="histogram", weight=steps, ylab="Steps", binwidth=1)
 
-![](instructions_fig/plot1avgstepday-1.png)
+![](figure/plot1c2-1.png)
 
     summary(sumsteps$steps) ## Median / Mean to total steps per day
 
@@ -60,7 +60,7 @@ What is the average daily activity pattern?
 
     qplot(interval, steps, data=avgsteps, geom="line")
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-1-1.png)
+![](figure/plot2c3-1.png)
 
     head(avgsteps,1) ## interval 835 averages the most steps
 
@@ -104,7 +104,7 @@ Imputing missing values
 
     qplot(date, data=sumsteps2, geom="histogram", weight=steps, ylab="Steps", binwidth=1)
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-2-1.png)
+![](figure/plot3c4-1.png)
 
     summary(sumsteps2$steps)
 
@@ -140,4 +140,4 @@ Are there differences in activity patterns between weekdays and weekends?
 
     qplot(interval,steps, data=avgsteps2, geom="line", facets=weekday~.)
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+![](figure/plot4unnamed-chunk-1-1.png)
