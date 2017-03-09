@@ -28,7 +28,7 @@ df$date <- ymd(df$date) # convert to date datatype
 1. Calculate the total number of steps taken per day
 2. Make a histogram of the total number of steps taken each day
 3. Calculate the mean and median of the total number of steps taken per day
-```{r echo=TRUE, eval=True,message=FALSE}
+```{r echo=TRUE, fig.path="instructions_fig/plot1"}
 sumsteps <- df %>% 
         filter(!is.na(steps)) %>% ## ignore missing values
         group_by(date) %>% 
