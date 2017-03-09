@@ -33,7 +33,7 @@ What is the mean total number of steps taken per day?
             group_by(date) %>% 
             summarise(steps = sum(steps)) ## total steps per day
 
-    qplot(date, data=sumsteps, geom="histogram", weight=steps, ylab="Steps", binwidth=1)
+    hist(sumsteps$steps, xlab = "Total Steps Taken per Day")
 
 ![](figure/plot1c2-1.png)
 
@@ -102,7 +102,7 @@ Imputing missing values
             group_by(date) %>% 
             summarise(steps = sum(steps)) ## total steps per day
 
-    qplot(date, data=sumsteps2, geom="histogram", weight=steps, ylab="Steps", binwidth=1)
+    hist(sumsteps2$steps, xlab = "Total Steps Taken per Day")
 
 ![](figure/plot3c4-1.png)
 

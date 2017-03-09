@@ -2,7 +2,7 @@
 title: "Coursera Reproducible Research: Program Assignment 1"
 author: "ncapps"
 date: "March 8, 2017"
-output: html_document
+output: md_document
 ---
 
 ## Loading and preprocessing the data
@@ -34,10 +34,9 @@ sumsteps <- df %>%
         group_by(date) %>% 
         summarise(steps = sum(steps)) ## total steps per day
 
-qplot(date, data=sumsteps, geom="histogram", weight=steps, ylab="Steps", binwidth=1)
-
+hist(sumsteps$steps, xlab = "Total Steps Taken per Day")
 summary(sumsteps$steps) ## Median / Mean to total steps per day
-```
+```     
 
 
 
@@ -77,7 +76,7 @@ sumsteps2 <- df2 %>%
         group_by(date) %>% 
         summarise(steps = sum(steps)) ## total steps per day
 
-qplot(date, data=sumsteps2, geom="histogram", weight=steps, ylab="Steps", binwidth=1)
+hist(sumsteps2$steps, xlab = "Total Steps Taken per Day")
 
 summary(sumsteps2$steps)
 ```
